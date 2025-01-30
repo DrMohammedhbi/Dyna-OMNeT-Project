@@ -7,17 +7,20 @@ classDiagram
         +handleMessage(cMessage*)
     }
     class ServerProcess {
-        +handleMessage(cMessage*)
-        +initialize()
+        +ServerProcess()
+        +activity()
     }
     class Client {
-        +handleMessage(cMessage*)
-        +initialize()
+        +Client()
+        +activity()
     }
     class DynaPacket {
-        +getKind()
-        +getServerProcId()
-        +setServerProcId()
+     + getSrcAddress() 
+    +setSrcAddress(int srcAddress)
+    + getDestAddress() 
+    +setDestAddress(int destAddress)
+    + getServerProcId() 
+    +setServerProcId(int serverProcId)
     }
     
     Server --> ServerProcess : creates
